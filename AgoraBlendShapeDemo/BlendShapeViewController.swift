@@ -52,7 +52,7 @@ class BlendShapeViewController: UIViewController {
     func joinChannel() {
         // set up agora instance when view loaded
         let config = AgoraRtcEngineConfig()
-        config.appId = "20b7c51ff4c644ab80cf5a4e646b0537"
+        config.appId = "09f52d9dcc1f406b93d97ff1f43c554f"
         config.areaCode = .global
         config.channelProfile = .liveBroadcasting
         // set audio scenario
@@ -83,7 +83,7 @@ class BlendShapeViewController: UIViewController {
     }
     
     func rtmLogin() {
-        self.rtmKit = AgoraRtmKit(appId: "20b7c51ff4c644ab80cf5a4e646b0537", delegate: self)
+        self.rtmKit = AgoraRtmKit(appId: "09f52d9dcc1f406b93d97ff1f43c554f", delegate: self)
         self.rtmKit?.login(byToken: nil, user: "user", completion: { loginCode in
             if loginCode == .ok {
                 self.rtmChannel = self.rtmKit?.createChannel(withId: self.channelName, delegate: self)
